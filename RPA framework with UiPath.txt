@@ -1,0 +1,26 @@
+RPA with UiPath project explanation:
+
+1. In the RPA project we have used Robotic Enterprise Framework also called Re-Framework is a template that is used to create automation workflows in a modular approach and scalable architecture. we are using VB script as a programming language
+
+2. As per the Page Object Model, we have maintained a separate sequence (we can say sequence means class) for every web page. Each web page has a separate class/sequence and that class/sequence  holds the functionality and actions of that web page. We invoked these sequence/class into the testcases by using invoke workflow activity and these sequence can be reused in the various scenarios as a reusable component. Each test case is a sequence that contains input data ,test steps and assertions to validate the expected outcomes.
+
+(Workflows is a collection of activities organized in a sequence that automates a specific business process) which can be reused /invoked in many scenarios. To use a workflow, you first have to invoke it and you can invoke a workflow using 'Invoke Workflow' activity in UiPath and save it as a template.)
+
+3.Here we have Designed the test cases to read the test data from excel files and re use it in the various test cases basically we followed data driven approach here and also Implemented Try-Catch mechanism in the framework to handle exception and included customized HTML reporting where it gives detailed test reports include screenshots will be captured and stored in a separate folder
+
+4.using Orchestrator for deployment, monitoring and managing the test cases and it acts as a repository to store our test scripts
+using Orchestrator we execute test cases on weekly basis  and also for nighty execution based on the schedule
+(Orchestrator is the component of the UiPath Platform for managing automations, robots and the related entities. It is a web application that enables to orchestrate robots in executing repetitive business processes.)
+
+Reporting: download ReporterforUiPath package
+1. create report - where it had report name and report location where to store the reports
+2. start test - this contains test case name and start the test
+
+activities
+click activity, 
+delay activity
+type into activity
+get text activity
+verify activity
+assert activity
+log message activity
